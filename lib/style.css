@@ -1,0 +1,36 @@
+:root, :root[data-theme=light] {
+	--color: #555;
+	--bg-color: white;
+	--transparent: rgba(137, 137, 137, 0.15);
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+		--color: #bdbfc2;
+		--bg-color: #1b1b1b;
+		--transparent: rgba(152, 152, 152, 0.15);
+	}
+}
+body {
+	color: var(--color);
+	background: var(--bg-color);
+	line-height: 1.6;
+	margin: 2.5rem auto;
+	width: 85%;
+	max-width: 72ch;
+	font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+footer {
+	font-size: 14px;
+	margin-top: 150px;
+	padding-bottom: 20px;
+}
+a {
+	color: var(--color);
+}
+a:hover {
+	background: var(--transparent);
+}
+details[open] summary {
+	margin-bottom: 0.5em;
+}
